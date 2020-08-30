@@ -1,4 +1,4 @@
-package com.jp.event.ticketconsumer.application.port.in;
+package com.jp.event.ticketconsumer.application.rest;
 
 import com.jp.event.ticketconsumer.application.domain.Ticket;
 import org.springframework.web.bind.annotation.GetMapping;

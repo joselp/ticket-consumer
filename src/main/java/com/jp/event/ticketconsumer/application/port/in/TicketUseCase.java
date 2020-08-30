@@ -1,4 +1,4 @@
-package com.jp.event.ticketconsumer.application.usecase;
+package com.jp.event.ticketconsumer.application.port.in;
 
 import com.jp.event.ticketconsumer.application.domain.Ticket;
 

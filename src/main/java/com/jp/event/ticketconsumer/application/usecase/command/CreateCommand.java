@@ -1,8 +1,7 @@
 package com.jp.event.ticketconsumer.application.usecase.command;
 
 import com.jp.event.ticketconsumer.application.domain.Ticket;
-import com.jp.event.ticketconsumer.application.entity.TicketEntity;
-import com.jp.event.ticketconsumer.application.usecase.TicketUseCase;
+import com.jp.event.ticketconsumer.application.port.in.TicketUseCase;
 
 public class CreateCommand implements Command {
 

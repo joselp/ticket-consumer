@@ -1,8 +1,8 @@
 package com.jp.event.ticketconsumer.adapter.in;
 
 import com.jp.event.ticketconsumer.application.domain.Ticket;
-import com.jp.event.ticketconsumer.application.port.in.TicketApi;
-import com.jp.event.ticketconsumer.application.usecase.TicketUseCase;
+import com.jp.event.ticketconsumer.application.rest.TicketApi;
+import com.jp.event.ticketconsumer.application.port.in.TicketUseCase;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;

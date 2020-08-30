@@ -2,6 +2,7 @@ package com.jp.event.ticketconsumer.application.usecase;
 
 import com.jp.event.ticketconsumer.application.domain.Ticket;
 import com.jp.event.ticketconsumer.application.entity.TicketEntity;
+import com.jp.event.ticketconsumer.application.port.in.TicketUseCase;
 import com.jp.event.ticketconsumer.application.port.out.TicketRepository;
 import com.jp.event.ticketconsumer.application.usecase.mapper.TicketMapper;
 
