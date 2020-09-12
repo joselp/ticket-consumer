@@ -13,5 +13,5 @@ public interface TicketUseCase {
 
     List<Ticket> getTickets();
 
-    boolean updateShowDate(String id, Integer postpone);
+    Ticket updateShowDate(String id, Integer postpone);
 }

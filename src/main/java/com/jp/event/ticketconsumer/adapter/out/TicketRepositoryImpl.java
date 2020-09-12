@@ -1,6 +1,6 @@
 package com.jp.event.ticketconsumer.adapter.out;
 
-import com.jp.event.ticketconsumer.application.entity.TicketEntity;
+import com.jp.event.ticketconsumer.adapter.out.entity.TicketEntity;
 import com.jp.event.ticketconsumer.application.port.out.TicketRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
@@ -33,6 +33,7 @@ public class TicketRepositoryImpl implements TicketRepository {
 
     @Override
     public int updateShowDate(String id, LocalDateTime newDate) {
+
         return repository.updateShowDate(id, newDate);
     }
 

@@ -1,10 +1,9 @@
-package com.jp.event.ticketconsumer.application.entity;
+package com.jp.event.ticketconsumer.adapter.out.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Generated;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,7 +20,6 @@ import java.time.LocalDateTime;
 public class TicketEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private LocalDateTime issueDate;
     private String seat;

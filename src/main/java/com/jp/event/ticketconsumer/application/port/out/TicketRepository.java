@@ -1,6 +1,6 @@
 package com.jp.event.ticketconsumer.application.port.out;
 
-import com.jp.event.ticketconsumer.application.entity.TicketEntity;
+import com.jp.event.ticketconsumer.adapter.out.entity.TicketEntity;
 
 import java.time.LocalDateTime;
 import java.util.List;

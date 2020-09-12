@@ -1,10 +1,12 @@
 package com.jp.event.ticketconsumer.application.usecase;
 
+import com.jp.event.ticketconsumer.adapter.mapper.TicketMapper;
+import com.jp.event.ticketconsumer.adapter.out.entity.TicketEntity;
 import com.jp.event.ticketconsumer.application.domain.Ticket;
-import com.jp.event.ticketconsumer.application.entity.TicketEntity;
 import com.jp.event.ticketconsumer.application.port.in.TicketUseCase;
 import com.jp.event.ticketconsumer.application.port.out.TicketRepository;
-import com.jp.event.ticketconsumer.application.usecase.mapper.TicketMapper;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -27,6 +29,7 @@ public class TicketUseCaseImpl implements TicketUseCase {
                 .seat(ticket.getSeat())
                 .issueDate(LocalDateTime.now())
                 .showDate(ticket.getShowDate())
+                .id(ticket.getId())
                 .build());
         ticket.setId(entity.getId());
         ticket.setIssueDate(entity.getIssueDate());
@@ -48,8 +51,13 @@ public class TicketUseCaseImpl implements TicketUseCase {
     }
 
     @Override
-    public boolean updateShowDate(String id, Integer postpone) {
-        return  ticketRepository.updateShowDate(id, LocalDateTime.now().plusDays(postpone)) > 0;
+    public Ticket updateShowDate(String id, Integer postpone) {
+
+        if (ticketRepository.updateShowDate(id, LocalDateTime.now().plusDays(postpone)) > 0) {
+            return ticketMapper.ticketEntityToTicket(ticketRepository.get(id).get());
+        }
+
+        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "ticket not found");
     }
 
     @Override

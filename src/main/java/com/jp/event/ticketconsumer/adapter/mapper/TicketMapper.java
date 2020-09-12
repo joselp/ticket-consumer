@@ -1,7 +1,7 @@
-package com.jp.event.ticketconsumer.application.usecase.mapper;
+package com.jp.event.ticketconsumer.adapter.mapper;
 
 import com.jp.event.ticketconsumer.application.domain.Ticket;
-import com.jp.event.ticketconsumer.application.entity.TicketEntity;
+import com.jp.event.ticketconsumer.adapter.out.entity.TicketEntity;
 import org.mapstruct.Mapper;
 
 import java.util.List;
